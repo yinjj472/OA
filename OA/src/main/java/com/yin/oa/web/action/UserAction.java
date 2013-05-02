@@ -1,7 +1,10 @@
-package com.yin.oa.web;
+package com.yin.oa.web.action;
 
+import com.opensymphony.xwork2.ActionSupport;
+import com.yin.oa.service.UserService;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 
 /**
@@ -10,13 +13,16 @@ import org.springframework.context.annotation.Scope;
  * Time: 下午2:36
  * User web Action
  */
-@Namespace("user")
-@Scope
-public class UserAction {
+@Namespace("/user")
+@Scope("prototype")
+public class UserAction extends ActionSupport {
+
+    @Autowired
+    private UserService userService;
 
     @Action("hello")
     public String hello() {
-        System.out.println("xxxx");
+        userService.hello();
         return null;
     }
 

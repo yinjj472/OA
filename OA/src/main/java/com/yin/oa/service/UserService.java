@@ -15,4 +15,6 @@ public interface UserService {
     public User getUser(long id);
 
     public void updateUser(User user);
+
+    public void hello();
 }
