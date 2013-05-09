@@ -8,4 +8,6 @@ package com.yin.oa.dao;
  */
 public class UserDAO {
 
+    private static String git = "hongming.liang";
+
 }
