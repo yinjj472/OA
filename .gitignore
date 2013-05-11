@@ -6,3 +6,7 @@
 *.ear
 .idea/*
 *.iml
+.project
+.classpath
+target/*
+target
